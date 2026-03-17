@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samruddha Belsare - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Boot Screen -->
+  <div id="boot-screen">
+    <div id="boot-terminal"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">SB_</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <div class="close-menu" id="close-menu">✕</div>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#timeline">TIMELINE</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+
+  <!-- Context -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span style="background: #ff5f56;"></span>
+                <span style="background: #ffbd2e;"></span>
+                <span style="background: #27c93f;"></span>
+              </div>
+              <div class="terminal-title">terminal_v1.0</div>
+            </div>
+            <div class="terminal-body" id="hero-terminal"></div>
+          </div>
+          <div class="cta-buttons" id="hero-ctas">
+            <a href="#projects" class="btn btn-cyan">VIEW PROJECTS</a>
+            <a href="#" class="btn btn-purple">DOWNLOAD RESUME</a>
+          </div>
+        </div>
+        <div class="hero-right scroll-anim">
+          <!-- Holographic Avatar -->
+          <div class="holo-avatar">
+            <!-- Outer spinning rings -->
+            <div class="orbit orbit-1">
+              <div class="orbit-dot"></div>
+            </div>
+            <div class="orbit orbit-2">
+              <div class="orbit-dot"></div>
+            </div>
+            <div class="orbit orbit-3">
+              <div class="orbit-dot"></div>
+            </div>
+            <!-- Core shell -->
+            <div class="holo-core">
+              <canvas id="codeRainCanvas"></canvas>
+              <div class="holo-initials">SB</div>
+              <div class="holo-pulse"></div>
+            </div>
+            <!-- Floating skill tags -->
+            <div class="float-tag tag-top">AI</div>
+            <div class="float-tag tag-right">WEB</div>
+            <div class="float-tag tag-bottom">CHATBOT</div>
+            <div class="float-tag tag-left">PYTHON</div>
+          </div>
+          <div class="status-badge">
+            <div class="status-dot"></div>
+            AVAILABLE FOR INTERNSHIPS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-label">// ABOUT_ME</div>
+      <h2 class="section-title" data-text="Who Am I?">Who Am I?</h2>
+      <div class="about-content">
+        <div class="about-left scroll-anim">
+          <p class="bio-text">
+            I'm Samruddha Belsare, a passionate student developer focused on building real-world AI systems, intelligent chatbots, and modern web applications. I believe in learning by building — every project I take on pushes the boundaries of what I know. Currently exploring the intersection of AI agents, voice interfaces, and full-stack development, I'm on a mission to build systems that actually matter.
+          </p>
+        </div>
+        <div class="about-right scroll-anim">
+          <div class="stats-grid">
+            <div class="card stat-card">
+              <div class="stat-val">3+</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-val">4+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-val">AI & ML</div>
+              <div class="stat-label">Focus Area</div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-val">Open</div>
+              <div class="stat-label">To Collaborate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-label">// SKILLS_MATRIX</div>
+      <h2 class="section-title" data-text="Tech Arsenal">Tech Arsenal</h2>
+      
+      <div class="skills-layout scroll-anim">
+        
+        <!-- Languages -->
+        <div class="skill-category cyan-tint">
+          <div class="category-title">LANGUAGES</div>
+          <div class="hex-grid">
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>PY</span><small>Python</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>SQ</span><small>SQL</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>JV</span><small>Java</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>C#</span><small>C#</small></div></div></div>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div class="skill-category purple-tint">
+          <div class="category-title">AI &amp; CHATBOTS</div>
+          <div class="hex-grid">
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>CB</span><small>Chatbot Dev</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>AG</span><small>AI Agents</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>ML</span><small>ML Basics</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>VA</span><small>Voice AI</small></div></div></div>
+          </div>
+        </div>
+
+        <!-- Web -->
+        <div class="skill-category mixed-tint">
+          <div class="category-title">WEB DEV</div>
+          <div class="hex-grid">
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>HC</span><small>HTML/CSS</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>JS</span><small>JavaScript</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>RD</span><small>Responsive Design</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>SO</span><small>SEO</small></div></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category grey-tint">
+          <div class="category-title">TOOLS</div>
+          <div class="hex-grid">
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>VS</span><small>VS Code</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>GT</span><small>Git</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>GH</span><small>GitHub</small></div></div></div>
+            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>SB</span><small>Supabase</small></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-label">// PROJECTS_LOG</div>
+      <h2 class="section-title" data-text="What I've Built">What I've Built</h2>
+      
+      <div class="filter-bar scroll-anim">
+        <button class="filter-btn active" data-filter="ALL">ALL</button>
+        <button class="filter-btn" data-filter="AI">AI</button>
+        <button class="filter-btn" data-filter="CHATBOT">CHATBOT</button>
+        <button class="filter-btn" data-filter="WEB">WEB</button>
+      </div>
+
+      <div class="projects-grid scroll-anim">
+        
+        <!-- Project 1 -->
+        <div class="card project-card" data-tag="CHATBOT">
+          <div class="tag-pill tag-chatbot">CHATBOT</div>
+          <div class="project-title">Chatbot Generator</div>
+          <p class="project-desc">GUI-based chatbot creation system with customizable intents, training data editor, and integrated voice input. Built for non-technical users to deploy chatbots without code.</p>
+          <div class="tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Tkinter</span>
+            <span class="tech-pill">NLP</span>
+            <span class="tech-pill">Voice API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/samruddha" target="_blank" class="btn btn-cyan">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card project-card" data-tag="AI">
+          <div class="tag-pill tag-ai">AI</div>
+          <div class="project-title">Face Recognition Chatbot</div>
+          <p class="project-desc">AI-powered chatbot that activates on face detection. Uses computer vision to identify the user and launches a personalized voice interaction session.</p>
+          <div class="tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">OpenCV</span>
+            <span class="tech-pill">Speech Recognition</span>
+            <span class="tech-pill">AI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/samruddha" target="_blank" class="btn btn-cyan">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card project-card" data-tag="WEB">
+          <div class="tag-pill tag-web">WEB</div>
+          <div class="project-title">AuraScents Website</div>
+          <p class="project-desc">Luxury perfume brand website with cinematic UI, smooth scroll animations, product showcases, and full SEO optimization for organic discovery.</p>
+          <div class="tech-stack">
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">SEO</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/samruddha" target="_blank" class="btn btn-cyan">GitHub ↗</a>
+            <a href="https://aurascents.netlify.app" target="_blank" class="btn btn-purple">Live Demo ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+      <div class="section-label">// SYSTEM_LOG</div>
+      <h2 class="section-title" data-text="My Journey">My Journey</h2>
+      
+      <div class="timeline">
+        
+        <div class="milestone scroll-anim">
+          <div class="timeline-content">
+            <div class="timeline-date">2022</div>
+            <div class="timeline-title">Started College</div>
+            <div class="timeline-desc">B.Sc. in Computer Science<br/>Began the journey into programming and problem-solving.</div>
+          </div>
+        </div>
+
+        <div class="milestone scroll-anim">
+          <div class="timeline-content">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-title">First Project</div>
+            <div class="timeline-desc">Python Chatbot v1<br/>Built my first rule-based chatbot — sparked my obsession with AI.</div>
+          </div>
+        </div>
+
+        <div class="milestone scroll-anim">
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-title">Leveled Up</div>
+            <div class="timeline-desc">AI &amp; Web Development<br/>Explored machine learning basics, computer vision, and modern web dev.</div>
+          </div>
+        </div>
+
+        <div class="milestone scroll-anim">
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-title">AuraScents Launch</div>
+            <div class="timeline-desc">Full Web Project<br/>Designed and deployed a complete luxury brand website end-to-end.</div>
+          </div>
+        </div>
+
+        <div class="milestone scroll-anim">
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-title">Advanced AI Systems</div>
+            <div class="timeline-desc">Face Recognition + Voice AI<br/>Built face-detection chatbot combining CV, voice, and AI agents.</div>
+          </div>
+        </div>
+
+        <div class="milestone scroll-anim">
+          <div class="timeline-content">
+            <div class="timeline-date">2025 - Now</div>
+            <div class="timeline-title">Seeking Internship</div>
+            <div class="timeline-desc">Actively building, learning, and looking for real-world opportunities.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-label">// ESTABLISH_CONNECTION</div>
+      <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
+      
+      <div class="contact-container scroll-anim">
+        
+        <div class="contact-left">
+          <a href="mailto:samruddha@email.com" class="contact-card">
+            <div class="contact-icon">
+              <!-- SVG Email -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">samruddha@email.com</span>
+            </div>
+          </a>
+          
+          <a href="https://github.com/samruddha" target="_blank" class="contact-card">
+            <div class="contact-icon">
+              <!-- SVG GitHub -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/samruddha</span>
+            </div>
+          </a>
+          
+          <a href="https://linkedin.com/in/samruddha" target="_blank" class="contact-card">
+            <div class="contact-icon">
+              <!-- SVG LinkedIn -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/samruddha</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-right">
+          <form id="contactForm" class="contact-form">
+            <input type="text" placeholder="NAME" required>
+            <input type="email" placeholder="EMAIL" required>
+            <textarea placeholder="MESSAGE" required></textarea>
+            <button type="submit" class="btn-submit">Initialize Transfer</button>
+            <div id="formMessage" class="form-success">> MESSAGE TRANSMITTED SUCCESSFULLY_</div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      SB_ &copy; 2025 — Samruddha Belsare
+    </div>
+    <div class="footer-center">
+      Built with code, caffeine &amp; curiosity.
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/samruddha" target="_blank" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      <a href="https://linkedin.com/in/samruddha" target="_blank" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

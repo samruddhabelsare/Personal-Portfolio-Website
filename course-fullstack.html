@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Full-Stack Developer Certificate - Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .course-page {
+      padding: 100px 5%;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      color: var(--secondary-neon);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      transition: color 0.3s;
+      align-self: flex-start;
+    }
+    .back-btn:hover {
+      color: var(--primary-neon);
+    }
+    .course-header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+    }
+    .course-title {
+      font-family: var(--font-mono);
+      font-size: 2.5rem;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+    .course-provider {
+      font-size: 1.1rem;
+      color: var(--primary-neon);
+      font-family: var(--font-mono);
+    }
+    .course-section {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 15px rgba(191, 95, 255, 0.05);
+      transition: border-color 0.3s;
+    }
+    .course-section:hover {
+      border-color: rgba(191, 95, 255, 0.4);
+    }
+    .course-section h3 {
+      font-family: var(--font-mono);
+      color: var(--secondary-neon);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .course-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .course-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    .course-list li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--primary-neon);
+      font-family: var(--font-mono);
+    }
+    .course-text {
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Boot Screen disabled for quick loading -->
+  <div id="boot-screen" style="display: none;"></div>
+
+  <main class="course-page">
+    <a href="index.html#learning" class="back-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      RETURN TO TERMINAL
+    </a>
+
+    <div class="course-header scroll-anim visible">
+      <h1 class="course-title">Microsoft Full-Stack Developer Professional Certificate</h1>
+      <div class="course-provider">by Microsoft</div>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>💡 Overview</h3>
+      <p class="course-text">A beginner-friendly professional certificate that trains you to become a job-ready full-stack developer using modern tools and AI-powered workflows.</p>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>🧠 What I'm Learning</h3>
+      <ul class="course-list">
+        <li>Frontend Development (HTML, CSS, JavaScript)</li>
+        <li>React for building UI</li>
+        <li>Backend Development (APIs, servers)</li>
+        <li>Database Management</li>
+        <li>Version Control (Git & GitHub)</li>
+        <li>AI-assisted development tools</li>
+      </ul>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>🚀 Skills Gained</h3>
+      <ul class="course-list">
+        <li>Building complete web applications</li>
+        <li>Connecting frontend with backend</li>
+        <li>Creating responsive UI/UX</li>
+        <li>Deploying real-world projects</li>
+      </ul>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>🎯 Why It Matters</h3>
+      <p class="course-text">This course prepares you for:</p>
+      <ul class="course-list" style="margin-top: 15px;">
+        <li>Full-stack developer roles</li>
+        <li>Freelancing & startup projects</li>
+        <li>Building real-world applications</li>
+      </ul>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -60,30 +60,48 @@ const bootLines = [
 ];
 
 const heroLines = [
-  "> NAME: Samruddha Belsare",
-  "> ROLE: Aspiring Full Stack Developer | AI & ML Enthusiast ",
-  "> SPEC: AI & Chatbot Builder | Web Developer",
-  "> STATUS: Open to Internships | Hackathon | PROJECTS",
-  "> SKILL: Building intelligent systems | Chatbots & real-world web apps."
+  "> USER: Samruddha Belsare",
+  "> DESIGNATION: CS Student | AI Systems Explorer",
+  "> CURRENT FOCUS: Autonomous Agents | RAG Architecture | Web Apps",
+  "> OBJECTIVE: Seeking Internships & Real-World Challenges",
+  "> DIRECTIVE: Learn by building. Train systems to think. Write clean code."
 ];
 
 window.addEventListener('load', async () => {
-  await typeWriter('boot-terminal', bootLines, 60, false);
-  await new Promise(r => setTimeout(r, 700));
-
   const bootScreen = document.getElementById('boot-screen');
-  bootScreen.style.opacity = '0';
-
-  setTimeout(() => {
-    bootScreen.style.pointerEvents = 'none';
-    bootScreen.style.display = 'none';
-
-    typeWriter('hero-terminal', heroLines, 40, true).then(() => {
-      document.getElementById('hero-ctas').style.opacity = '1';
-    });
-  }, 600);
-
   initCodeRain();
+
+  if (!sessionStorage.getItem('hasBooted')) {
+    sessionStorage.setItem('hasBooted', 'true');
+    if (document.getElementById('boot-terminal')) {
+      await typeWriter('boot-terminal', bootLines, 60, false);
+      await new Promise(r => setTimeout(r, 700));
+    }
+
+    if (bootScreen) bootScreen.style.opacity = '0';
+
+    setTimeout(() => {
+      if (bootScreen) {
+        bootScreen.style.pointerEvents = 'none';
+        bootScreen.style.display = 'none';
+      }
+      if (document.getElementById('hero-terminal')) {
+        typeWriter('hero-terminal', heroLines, 40, true).then(() => {
+          document.getElementById('hero-ctas').style.opacity = '1';
+        });
+      }
+    }, 600);
+  } else {
+    if (bootScreen) {
+      bootScreen.style.display = 'none';
+      bootScreen.style.pointerEvents = 'none';
+    }
+    if (document.getElementById('hero-terminal')) {
+      typeWriter('hero-terminal', heroLines, 40, true).then(() => {
+        document.getElementById('hero-ctas').style.opacity = '1';
+      });
+    }
+  }
 });
 
 /* ==============================
@@ -214,3 +232,81 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.target.reset();
   setTimeout(() => { msgEl.style.display = 'none'; }, 5000);
 });
+
+/* ==============================
+   TIMELINE FETCH & RENDER
+============================== */
+const timelineData = [
+  {
+    "year": "2022",
+    "title": "Started College",
+    "description": "B.Sc. in Computer Science<br />Began the journey into programming and problem-solving.",
+    "icon": "🎓"
+  },
+  {
+    "year": "2023",
+    "title": "First Project",
+    "description": "Python Chatbot v1<br />Built my first rule-based chatbot — sparked my obsession with AI.",
+    "icon": "🤖"
+  },
+  {
+    "year": "2024",
+    "title": "Leveled Up",
+    "description": "AI & Web Development<br />Explored machine learning basics, computer vision, and modern web dev.",
+    "icon": "⚡"
+  },
+  {
+    "year": "2024",
+    "title": "AuraScents Launch",
+    "description": "Full Web Project<br />Designed and deployed a complete luxury brand website end-to-end.",
+    "icon": "✨"
+  },
+  {
+    "year": "2025",
+    "title": "Advanced AI Systems",
+    "description": "Face Recognition + Voice AI<br />Built face-detection chatbot combining CV, voice, and AI agents.",
+    "icon": "👁️"
+  },
+  {
+    "year": "2025 - Now",
+    "title": "Seeking Internship",
+    "description": "Actively building, learning, and looking for real-world opportunities.",
+    "icon": "🎯"
+  }
+];
+
+function loadTimeline() {
+  const container = document.getElementById('timeline-container');
+  if (!container) return;
+
+  try {
+    timelineData.forEach(item => {
+      const milestone = document.createElement('div');
+      milestone.className = 'milestone scroll-anim';
+
+      const content = document.createElement('div');
+      content.className = 'timeline-content';
+      
+      const iconHtml = item.icon ? `<div class="timeline-icon">${item.icon}</div>` : '';
+
+      content.innerHTML = `
+        ${iconHtml}
+        <div class="timeline-date">${item.year}</div>
+        <div class="timeline-title">${item.title}</div>
+        <div class="timeline-desc">${item.description}</div>
+      `;
+
+      milestone.appendChild(content);
+      container.appendChild(milestone);
+      
+      if (typeof observer !== 'undefined') {
+        observer.observe(milestone);
+      }
+    });
+  } catch (error) {
+    console.error('Error loading timeline:', error);
+  }
+}
+
+// Ensure the timeline loads when DOM is ready
+window.addEventListener('DOMContentLoaded', loadTimeline);

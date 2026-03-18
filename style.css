@@ -48,32 +48,41 @@ body::before {
 
 /* Custom Cursor */
 #cursor-dot {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   background: var(--primary-neon);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--primary-neon);
 }
 
 #cursor-ring {
-  width: 28px;
-  height: 28px;
-  border: 1px solid var(--primary-neon);
+  width: 32px;
+  height: 32px;
+  border: 1.5px dashed var(--primary-neon);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.1s, height 0.1s, border-color 0.2s;
+  transition: width 0.15s, height 0.15s, border-color 0.2s, background-color 0.2s;
+  animation: cursorSpin 8s linear infinite;
+}
+
+@keyframes cursorSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .cursor-active {
   width: 45px !important;
   height: 45px !important;
   border-color: var(--secondary-neon) !important;
+  border-style: solid !important;
+  background-color: rgba(191, 95, 255, 0.1) !important;
 }
 
 /* Section Layout */
@@ -440,212 +449,198 @@ section {
   justify-content: center;
 }
 
-/* ── Holographic Avatar ── */
-.holo-avatar {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Orbiting rings */
-.orbit {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px dashed rgba(0, 255, 255, 0.3);
-  animation: spin linear infinite;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.orbit-1 {
-  width: 280px;
-  height: 280px;
-  animation-duration: 8s;
-  border-color: rgba(0, 255, 255, 0.4);
-}
-
-.orbit-2 {
-  width: 240px;
-  height: 240px;
-  animation-duration: 12s;
-  animation-direction: reverse;
-  border-color: rgba(191, 95, 255, 0.4);
-}
-
-.orbit-3 {
-  width: 195px;
-  height: 195px;
-  animation-duration: 6s;
-  border-color: rgba(0, 255, 255, 0.2);
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Dot on each ring */
-.orbit-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--primary-neon);
-  box-shadow: 0 0 8px var(--primary-neon), 0 0 16px var(--primary-neon);
-  margin-top: -4px;
-}
-
-.orbit-2 .orbit-dot {
-  background: var(--secondary-neon);
-  box-shadow: 0 0 8px var(--secondary-neon), 0 0 16px var(--secondary-neon);
-}
-
-/* Core circle */
-.holo-core {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, #0a0a14 60%, rgba(0, 255, 255, 0.05) 100%);
-  border: 1px solid rgba(0, 255, 255, 0.5);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 30px rgba(0, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ── Cyber Profile Card ── */
+.cyber-profile-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(10, 10, 20, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
   overflow: hidden;
-  z-index: 2;
-}
-
-#codeRainCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  opacity: 0.35;
-}
-
-.holo-initials {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1), inset 0 0 20px rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
   position: relative;
-  z-index: 3;
-  font-family: var(--font-mono);
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--primary-neon);
-  text-shadow: 0 0 10px var(--primary-neon), 0 0 30px rgba(0, 255, 255, 0.5);
-  letter-spacing: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Pulsing outer glow ring */
-.holo-pulse {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--primary-neon);
-  animation: pulse-ring 2.5s ease-out infinite;
-  z-index: 1;
+.cyber-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.2), inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
-@keyframes pulse-ring {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-
-/* Floating skill tags */
-.float-tag {
-  position: absolute;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--primary-neon);
-  background: rgba(0, 255, 255, 0.07);
-  border: 1px solid rgba(0, 255, 255, 0.35);
-  padding: 4px 10px;
-  border-radius: 3px;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.15);
-  animation: floatBob 3s ease-in-out infinite;
-}
-
-.tag-top {
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation-delay: 0s;
-}
-
-.tag-right {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  animation-delay: 0.7s;
-  color: var(--secondary-neon);
-  border-color: rgba(191, 95, 255, 0.4);
-  background: rgba(191, 95, 255, 0.07);
-}
-
-.tag-bottom {
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation-delay: 1.4s;
-}
-
-.tag-left {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  animation-delay: 2.1s;
-  color: var(--secondary-neon);
-  border-color: rgba(191, 95, 255, 0.4);
-  background: rgba(191, 95, 255, 0.07);
-}
-
-@keyframes floatBob {
-
-  0%,
-  100% {
-    filter: brightness(1);
-  }
-
-  50% {
-    filter: brightness(1.6) drop-shadow(0 0 6px currentColor);
-  }
-}
-
-.status-badge {
-  margin-top: 30px;
+.card-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  background: rgba(0, 255, 255, 0.1);
+  padding: 10px 15px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--primary-neon);
-  border: 1px solid var(--border-color);
-  padding: 6px 15px;
-  border-radius: 20px;
-  background: rgba(0, 255, 255, 0.05);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  font-size: 0.75rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-.status-dot {
+.card-status-dot {
   width: 8px;
   height: 8px;
   background: #27c93f;
   border-radius: 50%;
   box-shadow: 0 0 8px #27c93f;
+  margin-right: 8px;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.card-status-text {
+  color: var(--primary-neon);
+  flex-grow: 1;
+  letter-spacing: 1px;
+}
+
+.card-id {
+  color: var(--secondary-neon);
+  opacity: 0.8;
+}
+
+.card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.avatar-glow {
+  position: absolute;
+  top: -10%; left: -10%; width: 120%; height: 120%;
+  background: radial-gradient(circle, rgba(191,95,255,0.4) 0%, transparent 70%);
+  animation: rotate-glow 5s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate-glow {
+  to { transform: rotate(360deg); }
+}
+
+.avatar-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(13, 13, 20, 0.9);
+  border: 2px dashed var(--primary-neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.avatar-image span {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-neon);
+  text-shadow: 0 0 10px var(--primary-neon);
+  letter-spacing: 2px;
+}
+
+.profile-details {
+  text-align: center;
+  width: 100%;
+}
+
+.name-glitch {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  text-shadow: 2px 0 var(--secondary-neon), -2px 0 var(--primary-neon);
+}
+
+.role-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--bg-color);
+  background: var(--primary-neon);
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.metric {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 10px 5px;
+}
+
+.metric-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted-text);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.metric-value {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--secondary-neon);
+  text-shadow: 0 0 5px rgba(191, 95, 255, 0.5);
+}
+
+.card-footer {
+  padding: 15px 25px;
+  border-top: 1px solid rgba(0, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+  box-shadow: 0 0 8px var(--primary-neon);
+  animation: load-progress 2s ease-out forwards;
+}
+
+@keyframes load-progress {
+  from { width: 0%; }
+}
+
+.progress-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted-text);
+  letter-spacing: 1px;
+  text-align: right;
 }
 
 /* About Section */
@@ -934,7 +929,7 @@ section {
 /* Timeline Section */
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 0;
 }
@@ -995,11 +990,37 @@ section {
   border-radius: 4px;
   display: inline-block;
   width: 100%;
-  max-width: 380px;
+  max-width: 460px;
   text-align: left;
   transition: all 0.3s ease;
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  position: relative;
 }
+
+.timeline-icon {
+  position: absolute;
+  top: -15px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-color);
+  border: 1px solid var(--primary-neon);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  z-index: 5;
+}
+
+.milestone:nth-child(odd) .timeline-icon {
+  left: -15px;
+}
+
+.milestone:nth-child(even) .timeline-icon {
+  right: -15px;
+}
+
 
 .timeline-content:hover {
   border-color: rgba(0, 255, 255, 0.5);

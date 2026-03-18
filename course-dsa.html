@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structures & Algorithms Specialization - Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .course-page {
+      padding: 100px 5%;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      color: var(--primary-neon);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      transition: color 0.3s;
+      align-self: flex-start;
+    }
+    .back-btn:hover {
+      color: var(--secondary-neon);
+    }
+    .course-header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+    }
+    .course-title {
+      font-family: var(--font-mono);
+      font-size: 2.5rem;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+    .course-provider {
+      font-size: 1.1rem;
+      color: var(--secondary-neon);
+      font-family: var(--font-mono);
+    }
+    .course-section {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+      transition: border-color 0.3s;
+    }
+    .course-section:hover {
+      border-color: rgba(0, 255, 255, 0.4);
+    }
+    .course-section h3 {
+      font-family: var(--font-mono);
+      color: var(--primary-neon);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .course-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .course-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    .course-list li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-neon);
+      font-family: var(--font-mono);
+    }
+    .course-text {
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Boot Screen disabled for quick loading -->
+  <div id="boot-screen" style="display: none;"></div>
+
+  <main class="course-page">
+    <a href="index.html#learning" class="back-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      RETURN TO TERMINAL
+    </a>
+
+    <div class="course-header scroll-anim visible">
+      <h1 class="course-title">Data Structures and Algorithms Specialization</h1>
+      <div class="course-provider">by University of California San Diego</div>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>💡 Overview</h3>
+      <p class="course-text">A comprehensive specialization focused on core computer science fundamentals like data structures, algorithms, and problem-solving techniques used in real-world systems and coding interviews.</p>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>🧠 What I'm Learning</h3>
+      <ul class="course-list">
+        <li>Arrays, Linked Lists, Stacks, Queues</li>
+        <li>Trees, Graphs, Heaps</li>
+        <li>Sorting & Searching Algorithms</li>
+        <li>Dynamic Programming</li>
+        <li>Greedy Algorithms</li>
+        <li>Time & Space Complexity (Big-O)</li>
+      </ul>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>🚀 Skills Gained</h3>
+      <ul class="course-list">
+        <li>Strong problem-solving mindset</li>
+        <li>Writing optimized and efficient code</li>
+        <li>Preparing for coding interviews</li>
+        <li>Understanding large-scale system logic</li>
+      </ul>
+    </div>
+
+    <div class="course-section scroll-anim visible">
+      <h3>🎯 Why It Matters</h3>
+      <p class="course-text">This course builds the foundation of software engineering and is essential for:</p>
+      <ul class="course-list" style="margin-top: 15px;">
+        <li>Technical interviews</li>
+        <li>Competitive programming</li>
+        <li>Backend/system-level development</li>
+      </ul>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "year": "2022",
+    "title": "Started College",
+    "description": "B.Sc. in Computer Science<br />Began the journey into programming and problem-solving.",
+    "icon": "🎓"
+  },
+  {
+    "year": "2023",
+    "title": "First Project",
+    "description": "Python Chatbot v1<br />Built my first rule-based chatbot — sparked my obsession with AI.",
+    "icon": "🤖"
+  },
+  {
+    "year": "2024",
+    "title": "Leveled Up",
+    "description": "AI & Web Development<br />Explored machine learning basics, computer vision, and modern web dev.",
+    "icon": "⚡"
+  },
+  {
+    "year": "2024",
+    "title": "AuraScents Launch",
+    "description": "Full Web Project<br />Designed and deployed a complete luxury brand website end-to-end.",
+    "icon": "✨"
+  },
+  {
+    "year": "2025",
+    "title": "Advanced AI Systems",
+    "description": "Face Recognition + Voice AI<br />Built face-detection chatbot combining CV, voice, and AI agents.",
+    "icon": "👁️"
+  },
+  {
+    "year": "2025 - Now",
+    "title": "Seeking Internship",
+    "description": "Actively building, learning, and looking for real-world opportunities.",
+    "icon": "🎯"
+  }
+]

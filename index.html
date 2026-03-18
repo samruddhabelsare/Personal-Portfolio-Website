@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samruddha Belsare - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Custom Cursor -->
@@ -19,7 +21,7 @@
 
   <!-- Navigation -->
   <nav id="navbar">
-    <div class="logo">SB_</div>
+    <div class="logo">Samruddha Belsare</div>
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -44,7 +46,7 @@
 
   <!-- Context -->
   <main id="main-content">
-    
+
     <!-- Hero Section -->
     <section id="home">
       <div class="hero-bg"></div>
@@ -67,33 +69,50 @@
           </div>
         </div>
         <div class="hero-right scroll-anim">
-          <!-- Holographic Avatar -->
-          <div class="holo-avatar">
-            <!-- Outer spinning rings -->
-            <div class="orbit orbit-1">
-              <div class="orbit-dot"></div>
+          <!-- Futuristic Profile Card -->
+          <div class="cyber-profile-card">
+            <div class="card-header">
+              <span class="card-status-dot"></span>
+              <span class="card-status-text">AVAILABLE FOR INTERNSHIP</span>
+              <span class="card-id">ROOT ACCESS</span>
             </div>
-            <div class="orbit orbit-2">
-              <div class="orbit-dot"></div>
+
+            <div class="card-body">
+              <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <!-- Profile Image placeholder -->
+                <div class="avatar-image">
+                  <span>SB</span>
+                </div>
+              </div>
+
+              <div class="profile-details">
+                <h3 class="name-glitch" data-text="Samruddha Belsare">Samruddha Belsare</h3>
+                <div class="role-badge">Full Stack & AI Enthusiast</div>
+
+                <div class="metrics-grid">
+                  <div class="metric">
+                    <span class="metric-label">PROJECTS</span>
+                    <span class="metric-value">06+</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-label">STACKS</span>
+                    <span class="metric-value">10+</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-label">FOCUS</span>
+                    <span class="metric-value">AI/WEB</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="orbit orbit-3">
-              <div class="orbit-dot"></div>
+
+            <div class="card-footer">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+              </div>
+              <div class="progress-label">BUILDING NEXT SYSTEM... [OK]</div>
             </div>
-            <!-- Core shell -->
-            <div class="holo-core">
-              <canvas id="codeRainCanvas"></canvas>
-              <div class="holo-initials">SB</div>
-              <div class="holo-pulse"></div>
-            </div>
-            <!-- Floating skill tags -->
-            <div class="float-tag tag-top">AI</div>
-            <div class="float-tag tag-right">WEB</div>
-            <div class="float-tag tag-bottom">CHATBOT</div>
-            <div class="float-tag tag-left">PYTHON</div>
-          </div>
-          <div class="status-badge">
-            <div class="status-dot"></div>
-            AVAILABLE FOR INTERNSHIPS
           </div>
         </div>
       </div>
@@ -106,26 +125,33 @@
       <div class="about-content">
         <div class="about-left scroll-anim">
           <p class="bio-text">
-            I'm Samruddha Belsare, a passionate student developer focused on building real-world AI systems, intelligent chatbots, and modern web applications. I believe in learning by building — every project I take on pushes the boundaries of what I know. Currently exploring the intersection of AI agents, voice interfaces, and full-stack development, I'm on a mission to build systems that actually matter.
+            Hi, I'm <strong>Samruddha Belsare</strong>. I'm a computer science and design student passionate about
+            bridging the gap between complex AI logic and intuitive human experiences. My learning journey is fueled by
+            hands-on building—constantly exploring <em>autonomous agents, RAG systems, and data-driven web
+              applications</em>.
+            <br><br>
+            I enjoy training systems to think, learn, and respond. Whether it's experimenting with local LLMs, building
+            a multi-agent debate chamber, or designing cinematic user interfaces, my philosophy is straightforward:
+            <strong>learn by building systems that solve real problems.</strong>
           </p>
         </div>
         <div class="about-right scroll-anim">
           <div class="stats-grid">
             <div class="card stat-card">
-              <div class="stat-val">3+</div>
-              <div class="stat-label">Projects Built</div>
+              <div class="stat-val">6+</div>
+              <div class="stat-label">Systems Built</div>
             </div>
             <div class="card stat-card">
-              <div class="stat-val">4+</div>
-              <div class="stat-label">Technologies</div>
+              <div class="stat-val">10+</div>
+              <div class="stat-label">Technologies Used</div>
             </div>
             <div class="card stat-card">
-              <div class="stat-val">AI & ML</div>
-              <div class="stat-label">Focus Area</div>
+              <div class="stat-val">AI & Web</div>
+              <div class="stat-label">Learning Focus</div>
             </div>
             <div class="card stat-card">
               <div class="stat-val">Open</div>
-              <div class="stat-label">To Collaborate</div>
+              <div class="stat-label">For Internships</div>
             </div>
           </div>
         </div>
@@ -136,75 +162,253 @@
     <section id="skills">
       <div class="section-label">// SKILLS_MATRIX</div>
       <h2 class="section-title" data-text="Tech Arsenal">Tech Arsenal</h2>
-      
+
       <div class="skills-layout scroll-anim">
-        
+
         <!-- Languages -->
         <div class="skill-category cyan-tint">
           <div class="category-title">LANGUAGES</div>
           <div class="hex-grid">
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>PY</span><small>Python</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>SQ</span><small>SQL</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>JV</span><small>Java</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>C#</span><small>C#</small></div></div></div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>PY</span><small>Python</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>SQL</span><small>SQL</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>Java</span><small>Java</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>CS</span><small>C#</small></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- AI -->
         <div class="skill-category purple-tint">
-          <div class="category-title">AI &amp; CHATBOTS</div>
+          <div class="category-title">AI & LLM SYSTEMS</div>
           <div class="hex-grid">
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>CB</span><small>Chatbot Dev</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>AG</span><small>AI Agents</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>ML</span><small>ML Basics</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>VA</span><small>Voice AI</small></div></div></div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>AG</span><small>AI Agents</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>RG</span><small>RAG Systems</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>LM</span><small>LLMs</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>VA</span><small>Voice AI</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data / Visualization -->
+        <div class="skill-category mixed-tint">
+          <div class="category-title">DATA & VISUALIZATION</div>
+          <div class="hex-grid">
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>PD</span><small>Pandas</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>NP</span><small>NumPy</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>MT</span><small>Matplotlib</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>DV</span><small>Dashboards</small></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Web -->
         <div class="skill-category mixed-tint">
-          <div class="category-title">WEB DEV</div>
+          <div class="category-title">WEB DEVELOPMENT</div>
           <div class="hex-grid">
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>HC</span><small>HTML/CSS</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>JS</span><small>JavaScript</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>RD</span><small>Responsive Design</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>SO</span><small>SEO</small></div></div></div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>HC</span><small>HTML/CSS</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>JS</span><small>JavaScript</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>RD</span><small>Responsive UI</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>SEO</span><small>SEO</small></div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Tools -->
         <div class="skill-category grey-tint">
-          <div class="category-title">TOOLS</div>
+          <div class="category-title">TOOLS & PLATFORMS</div>
           <div class="hex-grid">
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>VS</span><small>VS Code</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>GT</span><small>Git</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>GH</span><small>GitHub</small></div></div></div>
-            <div class="hex-wrapper"><div class="hex-node"><div class="hex-inner"><span>SB</span><small>Supabase</small></div></div></div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>VS</span><small>VS Code</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>GT</span><small>Git</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>GH</span><small>GitHub</small></div>
+              </div>
+            </div>
+            <div class="hex-wrapper">
+              <div class="hex-node">
+                <div class="hex-inner"><span>OL</span><small>Ollama</small></div>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Learning Section -->
+    <section id="learning">
+      <div class="section-label">// ACTIVE_MODULES</div>
+      <h2 class="section-title" data-text="Currently Learning">Currently Learning</h2>
+
+      <div class="projects-grid scroll-anim">
+        <!-- Learning Item 1 -->
+        <a href="course-dsa.html" class="card project-card"
+          style="text-decoration: none; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1;">
+            <div class="tag-pill tag-ai"
+              style="display: inline-block; background: rgba(0, 255, 255, 0.1); border: 1px solid rgba(0, 255, 255, 0.3); color: var(--primary-neon); padding: 4px 10px; font-size: 0.7rem; font-family: var(--font-mono); border-radius: 20px; margin-bottom: 15px;">
+              UC SAN DIEGO</div>
+            <div class="project-title" style="margin-bottom: 10px; font-size: 1.3rem;">Data Structures & Algorithms
+              Specialization</div>
+            <p class="project-desc" style="color: var(--muted-text); line-height: 1.6; font-size: 0.95rem;">Mastering
+              core algorithms, data structures, and problem-solving techniques used in real-world applications and
+              coding interviews.</p>
+          </div>
+          <div class="project-links" style="margin-top: 20px;">
+            <span class="btn btn-cyan" style="font-size: 0.8rem; padding: 8px 16px;">View Details ↗</span>
+          </div>
+        </a>
+
+        <!-- Learning Item 2 -->
+        <a href="course-fullstack.html" class="card project-card"
+          style="text-decoration: none; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1;">
+            <div class="tag-pill tag-web"
+              style="display: inline-block; background: rgba(191, 95, 255, 0.1); border: 1px solid rgba(191, 95, 255, 0.3); color: var(--secondary-neon); padding: 4px 10px; font-size: 0.7rem; font-family: var(--font-mono); border-radius: 20px; margin-bottom: 15px;">
+              MICROSOFT</div>
+            <div class="project-title" style="margin-bottom: 10px; font-size: 1.3rem;">Full-Stack Developer Certificate
+            </div>
+            <p class="project-desc" style="color: var(--muted-text); line-height: 1.6; font-size: 0.95rem;">Learning to
+              build complete web applications using frontend, backend, databases, and modern development tools.</p>
+          </div>
+          <div class="project-links" style="margin-top: 20px;">
+            <span class="btn btn-purple" style="font-size: 0.8rem; padding: 8px 16px;">View Details ↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
-      <div class="section-label">// PROJECTS_LOG</div>
-      <h2 class="section-title" data-text="What I've Built">What I've Built</h2>
-      
+      <div class="section-label">// FEATURED_WORK</div>
+      <h2 class="section-title" data-text="Featured Work">Featured Work</h2>
+
       <div class="filter-bar scroll-anim">
         <button class="filter-btn active" data-filter="ALL">ALL</button>
-        <button class="filter-btn" data-filter="AI">AI</button>
-        <button class="filter-btn" data-filter="CHATBOT">CHATBOT</button>
+        <button class="filter-btn" data-filter="AI">AI SYSTEMS</button>
+        <button class="filter-btn" data-filter="CHATBOT">CHATBOTS</button>
+        <button class="filter-btn" data-filter="DASHBOARD">DATA</button>
         <button class="filter-btn" data-filter="WEB">WEB</button>
       </div>
 
       <div class="projects-grid scroll-anim">
-        
+
         <!-- Project 1 -->
+        <div class="card project-card" data-tag="AI">
+          <div class="tag-pill tag-chatbot">AI SYSTEM</div>
+          <div class="project-title">AI Council Debate Chamber</div>
+          <p class="project-desc">Multi-agent AI debate system with 17 unique personalities that argue, analyze, and
+            vote
+            on any topic in real-time. Fully local setup with no APIs, featuring multi-round debates, live vote
+            tracking,
+            and a final judge verdict inside a cinematic UI.</p>
+          <div class="tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Streamlit</span>
+            <span class="tech-pill">Ollama</span>
+            <span class="tech-pill">LLM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-username/ai-council-debate-chamber" target="_blank"
+              class="btn btn-cyan">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card project-card" data-tag="AI">
+          <div class="tag-pill tag-chatbot">RAG SYSTEM</div>
+          <div class="project-title">C++ RAG Chatbot</div>
+          <p class="project-desc">
+            Retrieval-Augmented Generation chatbot that answers C++ questions using a document-based knowledge system.
+            Combines semantic search with local LLM generation to deliver accurate, context-grounded responses without
+            hallucinations.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Streamlit</span>
+            <span class="tech-pill">LangChain</span>
+            <span class="tech-pill">FAISS</span>
+            <span class="tech-pill">Ollama</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-username/cpp-rag-chatbot" target="_blank" class="btn btn-cyan">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
         <div class="card project-card" data-tag="CHATBOT">
           <div class="tag-pill tag-chatbot">CHATBOT</div>
           <div class="project-title">Chatbot Generator</div>
-          <p class="project-desc">GUI-based chatbot creation system with customizable intents, training data editor, and integrated voice input. Built for non-technical users to deploy chatbots without code.</p>
+          <p class="project-desc">GUI-based chatbot creation system with customizable intents, training data editor, and
+            integrated voice input. Built for non-technical users to deploy chatbots without code.</p>
           <div class="tech-stack">
             <span class="tech-pill">Python</span>
             <span class="tech-pill">Tkinter</span>
@@ -216,11 +420,34 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 4 -->
+        <div class="card project-card" data-tag="DASHBOARD">
+          <div class="tag-pill tag-chatbot">DATA DASHBOARD</div>
+          <div class="project-title">India Student Command Centre</div>
+          <p class="project-desc">
+            Interactive student dashboard designed for Indian education systems, featuring identity card generation, CSV
+            data analysis, and marks visualization with custom charts. Built with a clean Streamlit UI and inspired by
+            Indian academic culture.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Streamlit</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">NumPy</span>
+            <span class="tech-pill">Matplotlib</span>
+          </div>
+          <div class="project-links">
+            <a href="https://smart-student-dashboard.streamlit.app/" target="_blank" class="btn btn-cyan">Live Demo
+              ↗</a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
         <div class="card project-card" data-tag="AI">
           <div class="tag-pill tag-ai">AI</div>
           <div class="project-title">Face Recognition Chatbot</div>
-          <p class="project-desc">AI-powered chatbot that activates on face detection. Uses computer vision to identify the user and launches a personalized voice interaction session.</p>
+          <p class="project-desc">AI-powered chatbot that activates on face detection. Uses computer vision to identify
+            the user and launches a personalized voice interaction session.</p>
           <div class="tech-stack">
             <span class="tech-pill">Python</span>
             <span class="tech-pill">OpenCV</span>
@@ -232,11 +459,12 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 6 -->
         <div class="card project-card" data-tag="WEB">
           <div class="tag-pill tag-web">WEB</div>
           <div class="project-title">AuraScents Website</div>
-          <p class="project-desc">Luxury perfume brand website with cinematic UI, smooth scroll animations, product showcases, and full SEO optimization for organic discovery.</p>
+          <p class="project-desc">Luxury perfume brand website with cinematic UI, smooth scroll animations, product
+            showcases, and full SEO optimization for organic discovery.</p>
           <div class="tech-stack">
             <span class="tech-pill">HTML</span>
             <span class="tech-pill">CSS</span>
@@ -256,57 +484,9 @@
     <section id="timeline">
       <div class="section-label">// SYSTEM_LOG</div>
       <h2 class="section-title" data-text="My Journey">My Journey</h2>
-      
-      <div class="timeline">
-        
-        <div class="milestone scroll-anim">
-          <div class="timeline-content">
-            <div class="timeline-date">2022</div>
-            <div class="timeline-title">Started College</div>
-            <div class="timeline-desc">B.Sc. in Computer Science<br/>Began the journey into programming and problem-solving.</div>
-          </div>
-        </div>
 
-        <div class="milestone scroll-anim">
-          <div class="timeline-content">
-            <div class="timeline-date">2023</div>
-            <div class="timeline-title">First Project</div>
-            <div class="timeline-desc">Python Chatbot v1<br/>Built my first rule-based chatbot — sparked my obsession with AI.</div>
-          </div>
-        </div>
-
-        <div class="milestone scroll-anim">
-          <div class="timeline-content">
-            <div class="timeline-date">2024</div>
-            <div class="timeline-title">Leveled Up</div>
-            <div class="timeline-desc">AI &amp; Web Development<br/>Explored machine learning basics, computer vision, and modern web dev.</div>
-          </div>
-        </div>
-
-        <div class="milestone scroll-anim">
-          <div class="timeline-content">
-            <div class="timeline-date">2024</div>
-            <div class="timeline-title">AuraScents Launch</div>
-            <div class="timeline-desc">Full Web Project<br/>Designed and deployed a complete luxury brand website end-to-end.</div>
-          </div>
-        </div>
-
-        <div class="milestone scroll-anim">
-          <div class="timeline-content">
-            <div class="timeline-date">2025</div>
-            <div class="timeline-title">Advanced AI Systems</div>
-            <div class="timeline-desc">Face Recognition + Voice AI<br/>Built face-detection chatbot combining CV, voice, and AI agents.</div>
-          </div>
-        </div>
-
-        <div class="milestone scroll-anim">
-          <div class="timeline-content">
-            <div class="timeline-date">2025 - Now</div>
-            <div class="timeline-title">Seeking Internship</div>
-            <div class="timeline-desc">Actively building, learning, and looking for real-world opportunities.</div>
-          </div>
-        </div>
-
+      <div class="timeline" id="timeline-container">
+        <!-- Timeline populated dynamically via JS -->
       </div>
     </section>
 
@@ -314,40 +494,54 @@
     <section id="contact">
       <div class="section-label">// ESTABLISH_CONNECTION</div>
       <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
-      
+
       <div class="contact-container scroll-anim">
-        
+
         <div class="contact-left">
-          <a href="mailto:samruddha@email.com" class="contact-card">
+          <a href="mailto:samruddhabelsare2005@gmail.com" class="contact-card">
             <div class="contact-icon">
               <!-- SVG Email -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
             </div>
             <div class="contact-info">
               <span class="contact-label">Email</span>
-              <span class="contact-value">samruddha@email.com</span>
+              <span class="contact-value">samruddhabelsare2005@gmail.com</span>
             </div>
           </a>
-          
-          <a href="https://github.com/samruddha" target="_blank" class="contact-card">
+
+          <a href="https://github.com/samruddhabelsare" target="_blank" class="contact-card">
             <div class="contact-icon">
               <!-- SVG GitHub -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
             </div>
             <div class="contact-info">
               <span class="contact-label">GitHub</span>
-              <span class="contact-value">github.com/samruddha</span>
+              <span class="contact-value">https://github.com/samruddhabelsare</span>
             </div>
           </a>
-          
-          <a href="https://linkedin.com/in/samruddha" target="_blank" class="contact-card">
+
+          <a href="https://www.linkedin.com/in/samruddha-belsare-b50b7a273/" target="_blank" class="contact-card">
             <div class="contact-icon">
               <!-- SVG LinkedIn -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
             </div>
             <div class="contact-info">
               <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">linkedin.com/in/samruddha</span>
+              <span class="contact-value">https://www.linkedin.com/in/samruddha-belsare-b50b7a273/</span>
             </div>
           </a>
         </div>
@@ -377,14 +571,25 @@
     </div>
     <div class="footer-right">
       <a href="https://github.com/samruddha" target="_blank" aria-label="GitHub">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+          </path>
+        </svg>
       </a>
       <a href="https://linkedin.com/in/samruddha" target="_blank" aria-label="LinkedIn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
       </a>
     </div>
   </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
